@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: kruti-dev-docx-converter
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
