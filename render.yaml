@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: kruti-dev-docx-converter
+    runtime: python
+    buildCommand: |
+      apt-get update && apt-get install -y tesseract-ocr tesseract-ocr-hin
+      pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    plan: free
